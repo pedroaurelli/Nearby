@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   title: {
-    fontSize: 24,
+    fontSize: 16,
     fontFamily: fontFamily.regular,
     color: colors.gray[500]
   }
