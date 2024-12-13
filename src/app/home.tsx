@@ -1,7 +1,7 @@
 import { Alert, Text, View } from 'react-native'
 import { api } from '@/clients/api'
 import { useEffect, useState } from 'react'
-import { Categories, Places, PlaceResult } from '@/components'
+import { Categories, Places } from '@/components'
 import MapView, { Callout, Marker } from 'react-native-maps'
 import { colors } from '../styles/colors'
 import { fontFamily } from '../styles/font-family'
@@ -12,9 +12,20 @@ export type CategoryResult = {
   name: string
 }
 
-export type MarketResult = PlaceResult & {
+export type MarketResult = {
+  id: string
+  name: string
+  description: string
+  coupons: number
+  cover: string
+  address: string
   latitude: number
   longitude: number
+  phone: string
+  rules: {
+    description: string
+    id: string
+  }[]
 }
 
 const currentLocation = {

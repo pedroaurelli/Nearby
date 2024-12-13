@@ -2,18 +2,10 @@ import { Image, Text, TouchableOpacity, TouchableOpacityProps, View } from 'reac
 import { styles } from './styles'
 import { IconTicket } from '@tabler/icons-react-native'
 import { colors } from '../../styles/colors'
-
-export type PlaceResult = {
-  id: string
-  name: string
-  description: string
-  coupons: number
-  cover: string
-  address: string
-}
+import { MarketResult } from '../../app/home'
 
 type PlaceProps = TouchableOpacityProps & {
-  data: PlaceResult
+  data: MarketResult
 }
 
 export function Place ({data, ...rest}: PlaceProps) {
